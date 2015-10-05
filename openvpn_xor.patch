@@ -141,7 +141,7 @@ diff -rupN openvpn-2.3.6/src/openvpn/socket.c openvpn-2.3.6_/src/openvpn/socket.
 +	for (i = 0, b = BPTR (buf); i < len; i++, b++) {
 +		cpy[i]=*b ;
 +	}
-+	for (i = 0, b = BPTR (buf)+len; i < len; i++, b--) {
++	for (i = 0, b = BPTR (buf)+len-1; i < len; i++, b--) {
 +		*b=cpy[i] ;
 +	}
 +	return BLEN (buf);
